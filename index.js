@@ -10,6 +10,12 @@ io.on('connection', function(socket){ //Listen on the connection event for incom
     console.log('a user connected');
 });
 
+io.on('connection', function(socket){
+    socket.on('chat message', function(msg){
+        console.log('message: ' + msg);
+    });
+});
+
 http.listen(3000, function(){
     console.log('Hello, there! Let\'s listen on :3000');
 });
