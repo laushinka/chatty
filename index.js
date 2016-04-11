@@ -7,7 +7,7 @@ app.get('/', function(req, res){
 });
 
 io.on('connection', function(socket){ //Listen on the connection event for incoming sockets, and log it to the console
-    console.log('a user connected')
+    console.log('a user connected');
 });
 
 http.listen(3000, function(){

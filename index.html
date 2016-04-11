@@ -57,8 +57,14 @@
         </form>
 
         <script src="/socket.io/socket.io.js"></script>
+        <script src="http://code.jquery.com/jquery-1.11.1.js"></script>
         <script>
             var socket = io(); /* No need to specify URL, because it defaults to trying to connect to the host server page */
+            $('form').submit(function(){
+                socket.emit('chat message', $('#m').val());
+                $('#m').val('');
+                return false;
+            });
         </script>
 
     </body>
