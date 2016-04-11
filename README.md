@@ -1,1 +1,1 @@
-An attempt at building a simple chat application.
+An attempt at building a simple chat application using Socket.IO.
